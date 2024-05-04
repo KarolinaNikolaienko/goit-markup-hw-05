@@ -459,7 +459,6 @@ button {
 /* #region Subscribe*/
 .footer-email-field {
     display: flex;
-    gap: 24px;
 }
 .footer-email-label {
     color: rgba(var(--white), 1);
@@ -468,7 +467,28 @@ button {
 }
 
 .footer-email-input {
-    border-color: rgba(var(--white), 1);
+    width: 264px;
+    margin-right: 24px;
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: rgba(var(--white), 1);
+    background-color: transparent;
+    border: 1px solid rgba(var(--white), 1);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    outline: transparent;
+    transition: var(--trans);
+    transition-property: border-color;
+}
+
+.footer-email-input::placeholder {
+    color: rgba(var(--white), 1);
+}
+
+.footer-email-input:focus {
+    border-color: rgba(var(--iris), 1);
 }
 
 .subscribe-button {
@@ -747,12 +767,20 @@ button {
     background-color: transparent;
     border-radius: 2px;
     border: 1px solid rgb(var(--grey), 0.4);
-    fill: transparent;
     cursor: pointer;
+    transition: var(--trans);
+}
+
+.pp-checkbox-icon {
+    fill: transparent;
+    transition: var(--trans);
 }
 
 input[type='checkbox']:checked + .modal-pp-label > .pp-checkbox {
     background-color: rgba(var(--ocean), 1);
+}
+
+input[type='checkbox']:checked+.modal-pp-label>.pp-checkbox>.pp-checkbox-icon {
     fill: rgba(var(--cloud), 1);
 }
 /* #endregion */
